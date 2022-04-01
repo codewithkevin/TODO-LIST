@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 app.get('/', (req, res) => {
     var today = new Date();
     var currentDay = today.getDay();
-    // var currentDayname = currentDay.toString();
+    var time = today.getHours();
     var day = "";
 
     switch (currentDay) {
@@ -36,7 +36,10 @@ app.get('/', (req, res) => {
         default:
     }
 
-    res.render("list", { kidofDay: day });
+    res.render("list",
+     { kidofDay: day,
+        timezone : time
+     });
         
 
 });
