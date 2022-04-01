@@ -3,6 +3,11 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+// Variables
+var items = [];
+
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
@@ -28,7 +33,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    var item = req.body.newItem;
+    item = req.body.newItem;
+    items.push(item);
     res.redirect("/");
 })
 
