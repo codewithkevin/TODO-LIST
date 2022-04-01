@@ -33,6 +33,7 @@ app.get('/', (req, res) => {
         case 6:
             day = "Saturday";
             break;
+        default:
     }
 
     res.render("list", { kidofDay: day });
