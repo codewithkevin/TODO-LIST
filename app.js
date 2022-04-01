@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 
     res.render("list",
      { kidofDay: day,
+        newlist:item,
      });
         
 
@@ -28,7 +29,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     var item = req.body.newItem;
-    console.log(item);
+    res.redirect("/");
 })
 
 
