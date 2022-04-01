@@ -7,22 +7,26 @@ app.use("view engine", "ejs");
 
 app.get('/', (req, res) => {
     var today = new Date();
-    // var time = today.getTime();
-    var currentTime = today.toLocaleString();
+    var currentTime = today.getDay();
+    var day = "";
 
     if(today.getDate() === 6 || today.getDate() === 0){
-        res.write('<h1>Weekend</h1>' + currentTime );
-    
-    }else{
-        res.write('<h1>Weekday</h1>' + currentTime );
-        res.send();
-    } 
+        day = "Weekend";
+
+        res.render("list", { kidofDay: day });
+    } else {
+        if(currentTime < 12){
+            day = "Morning";
+        } else if(currentTime >= 12 && currentTime < 18){
+            day = "Afternoon";
+        } else {
+            day = "Evening";
+        }
+        res.render("list", { kidofDay: day });
+    }
+        
 
 });
-
-
-
-
 
 
 
