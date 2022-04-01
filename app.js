@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use("view engine", "ejs");
+app.set("view engine", "ejs");
 
 app.get('/', (req, res) => {
     var today = new Date();
@@ -12,18 +12,11 @@ app.get('/', (req, res) => {
 
     if(today.getDate() === 6 || today.getDate() === 0){
         day = "Weekend";
-
-        res.render("list", { kidofDay: day });
     } else {
-        if(currentTime < 12){
-            day = "Morning";
-        } else if(currentTime >= 12 && currentTime < 18){
-            day = "Afternoon";
-        } else {
-            day = "Evening";
-        }
-        res.render("list", { kidofDay: day });
+        day = "Weekday";
     }
+
+    res.render("list", { kidofDay: day });
         
 
 });
