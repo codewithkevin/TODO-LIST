@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 
     res.render("list",
      { kidofDay: day,
-        newlistItems:items,
+        newlistItemS:items,
      });
         
 

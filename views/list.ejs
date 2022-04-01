@@ -17,12 +17,13 @@
         <li>Cook Food</li>
         <li>Eat Food</li>
         
+    
+
+        <%for (let i = 0; i < newlistItems.length; i++) {%>
+            <li><%=newlistItems[i]%></li>  
+
+        <%}%>
     </ul>
-
-    <%for (let i = 0; i < newlistItems.length; i++) {%>
-        <li> <%=newItem%> <%=i%> </li>  
-
-    }%>
 
 
 
