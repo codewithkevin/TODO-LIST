@@ -14,7 +14,6 @@ app.set("view engine", "ejs");
 
 app.get('/', (req, res) => {
     var today = new Date();
-    var currentDay = today.getDay();
     var options = {
         weekday: 'long',
         day: 'numeric',
