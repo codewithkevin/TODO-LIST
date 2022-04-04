@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
         weekday: 'long',
         day: 'numeric',
         month: 'long'
+        
     };
     
     var day = today.toLocaleDateString('en-US', options);
