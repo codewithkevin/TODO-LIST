@@ -13,17 +13,20 @@
         <h1>It is a <%=kidofDay%> </h2>
     </div>
 
-   
-
-    <ul>
+    <div class="box">
+        <ul>
         
-        <%for (let i = 0; i < newlistItems.length; i++) {%>
+            <%for (let i = 0; i < newlistItems.length; i++) {%>
+    
+                <li> <%=newlistItems[i]%> </li>  
+    
+            <%}%>
+        </ul>
+    
+        
+    </div>
 
-            <li> <%=newlistItems[i]%> </li>  
-
-        <%}%>
-    </ul>
-
+    
 
 
 
