@@ -17,7 +17,7 @@
         <%for (let i = 0; i < newlistItems.length; i++) {%>
 
             <div class="item">
-                
+                <input type="checkbox">
                 <p> <%=newlistItems[i]%> </p> 
             </div>
              
@@ -32,7 +32,6 @@
     <form action="/" method="post">
         <input type="text" name="newItem" placeholder="name">
         <button type="submit" name="button">Add</button>
-        <button type="submit" name="remove">romve</button>
     </form>
     
 </body>
