@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Variables
-let items = [];
+let item = [];
 
 
 
