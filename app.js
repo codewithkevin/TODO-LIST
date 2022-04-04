@@ -10,6 +10,7 @@ let items = [];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static("public"))
 
 app.set("view engine", "ejs");
 
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
         day: 'numeric',
         month: 'long',
     };
+    
     
     let day = today.toLocaleDateString('en-US', options);
     
