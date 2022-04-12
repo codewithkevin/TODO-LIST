@@ -5,7 +5,7 @@ const app = express();
 
 // Variables
 let items = [];
-const new = []
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
