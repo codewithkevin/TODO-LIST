@@ -26,11 +26,13 @@ app.get('/', (req, res) => {
     
     
     let day = today.toLocaleDateString('en-US', options);
+    let time = today.toLocaleTimeString();
     
 
     res.render("list",
      { kidofDay: day,
         newlistItems:items,
+        timeofDay: time,
      });
         
 
